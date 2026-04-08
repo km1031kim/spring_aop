@@ -25,7 +25,12 @@ public class BeanTest {
 
     @Aspect
     static class BeanAspect {
-
+        /**
+         * 빈 이름으로 매칭
+         * @param joinPoint
+         * @return
+         * @throws Throwable
+         */
         @Around("bean(orderService) || bean(*Repository)")
         public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
             log.info("[bean] {}", joinPoint.getStaticPart());
