@@ -193,4 +193,9 @@ public class ExecutionTest {
         pointcut.setExpression("execution(* aop.member.MemberService.*(..))");
         assertThat(pointcut.matches(helloMethod, MemberServiceImpl.class)).isTrue();
     }
+
+    /**
+     * args() 상위 타입 가능
+     * execution()에서 타입 매칭 시 정확하게 매칭해야함. 다형성 사용 x
+     */
 }
