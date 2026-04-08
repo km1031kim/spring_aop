@@ -208,4 +208,9 @@ public class ExecutionTest {
      * final 빈에 대한 오류 발생 가능.
      * 반드시 execution 지시자로 범위를 좁혀야 한다.
      */
+
+    /**
+     * @annotation : 메서드가 주어진 애노테이션을 가지고 있는 조인 포인트를 매칭
+     */
+
 }
