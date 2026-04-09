@@ -25,9 +25,9 @@ public class RetryAspect {
 
         for (int retryCount = 1; retryCount <= maxRetry; retryCount++) {
             try {
-                log.info("[retry] try count={}/{}", retryCount, maxRetry);
                 return joinPoint.proceed();
             } catch (Exception e) {
+                log.info("[retry] try count={}/{}", retryCount, maxRetry);
                 exceptionHolder = e;
             }
         }
