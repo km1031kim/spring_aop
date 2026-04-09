@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class CallServiceV2 {
 
+    /**
+     * ApplicationContext는 너무 많은 기능을 제공.
+     * ObjectProvider를 사용하여 스프링 빈 생성 시점이 아닌 실제 객체 생성 시점으로 지연 로딩
+     */
 //    private final ApplicationContext applicationContext;
     private final ObjectProvider<CallServiceV2> callServiceProvider;
 
